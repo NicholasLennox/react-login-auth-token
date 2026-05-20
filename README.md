@@ -59,7 +59,7 @@ The token contains claims - pieces of information about the user, like their nam
 The service is responsible for one thing: talking to the API. It knows nothing about state, context, or the UI.
 
 ```js
-const API_URL = "http://localhost:8080"
+const API_URL = "..."
 
 export async function loginUser(username, password) {
     const res = await fetch(`${API_URL}/login`, {
