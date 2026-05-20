@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5272"
+const API_URL = "https://movies-api-demo.azurewebsites.net/"
 
 export default async function loginUser(username, password) {
     // Fetch - POST to server, content type of application/json, passing the username and password
