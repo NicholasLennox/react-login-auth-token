@@ -1,4 +1,4 @@
-const API_URL = "https://movies-api-demo.azurewebsites.net/"
+const API_URL = import.meta.env.VITE_API_URL
 
 export default async function loginUser(username, password) {
     // Fetch - POST to server, content type of application/json, passing the username and password

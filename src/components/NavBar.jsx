@@ -19,7 +19,11 @@ export default function NavBar() {
         <>
             <nav className="navbar navbar-bg bg-dark">
                 <div className="container-fluid">
-                    <NavLink className="navbar-brand text-white text-decoration-none" to="/">🎬 Home</NavLink>
+                    <div>
+                        <NavLink className="navbar-brand text-white text-decoration-none" to="/">🎬 Home</NavLink>
+                        <NavLink className="text-white text-decoration-none" to="/movies/add">🔐 Add movie</NavLink>
+                    </div>
+
                     <div className="d-flex gap-3 align-items-center">
                         {isLoggedIn ? (
                             <>
@@ -31,7 +35,7 @@ export default function NavBar() {
                         )}
                     </div>
                 </div>
-        </nav >
+            </nav >
         </>
     )
 }

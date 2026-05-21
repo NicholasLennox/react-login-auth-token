@@ -8,6 +8,9 @@ import NavBar from './components/NavBar'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import { AuthProvider } from './context/AuthContext'
+import MovieDetailsPage from './pages/MovieDetailsPage'
+import AddMoviePage from './pages/AddMoviePage'
+import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
 
@@ -19,6 +22,13 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path='/movies/:id' element={<MovieDetailsPage />} />
+            {/* Protect add page - because it needs a token */}
+            <Route path='/movies/add' element={
+              <ProtectedRoute>
+                <AddMoviePage />
+              </ProtectedRoute>
+            } />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
